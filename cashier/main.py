@@ -56,7 +56,7 @@ def get_status(main_args):
 
 
 def create_order(main_args):
-    order_id = requests.post(f'http://{main_args.host}:{main_args.port}/create', data=dict(
+    order_id = requests.post(f'http://{main_args.host}:{main_args.port}/create', params=dict(
         bigmacs=ask_amount('BigMacs'),
         cola=ask_amount('Cola'),
         fries=ask_amount('Fries')
